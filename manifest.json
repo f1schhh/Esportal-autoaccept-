@@ -1,0 +1,30 @@
+{
+    "name": "Esportal AutoAccept",
+    "description" : "A plugin for users to auto accept their matches on esportal",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": ["tabs", 
+        "*://*.beta.esportal.se/*", 
+        "storage",
+        "management",
+        "background",
+        "http://*/",
+        "https://*/"],
+    "background": {
+            "scripts": ["content.js"],
+            "persistent": false
+    },
+    "icons": { "16": "img/icon16.png",
+        "48": "img/icon48.png",
+       "128": "img/icon128.png" },
+    "content_scripts":[
+        {
+        "matches": ["*://*.beta.esportal.se/*"],
+        "js": ["jquery-3.4.1.js","content.js"]
+    }
+],
+    "browser_action": {
+      "default_popup": "startpage.html"
+    }
+
+  }
