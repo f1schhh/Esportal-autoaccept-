@@ -6,7 +6,6 @@ function update(){
     if(getElementByXpath(acceptbtn) == null){
         
     }else{
-
         getElementByXpath(acceptbtn).click();
     }
 }
